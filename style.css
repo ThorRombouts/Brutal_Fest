@@ -1,0 +1,157 @@
+*, *::before, *::after { box-sizing: border-box; } 
+
+
+.table {
+  color: #312d3e;
+}
+
+*{
+    background: #e8e4d9;
+    color: #0a0a0a;
+    font-family: sans-serif;
+    margin: 0;
+}
+
+
+th {
+  background-color: #0a0a0a;
+  color: #ffffff;
+}
+
+iframe{
+    height: 180px;
+}
+
+img {
+  padding: 0px;
+  max-width: 100%;
+  height: auto;
+}
+
+h1 {
+  font-size: 45px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #312d3e;
+}
+
+body {
+  line-height: 1.5; 
+}
+
+
+a {
+  color: #0a0a0a;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: #0a0a0a;  
+  color: #ffffff;       
+}
+
+#line-up {
+  color: #0a0a0a;
+}
+
+nav {
+  border: 2px solid #0a0a0a;
+  padding: 10px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  background-color: #e8e4d9;
+  z-index: 10;
+}
+
+#line-up, #tickets, #info {
+  border: 2px solid #0a0a0a;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 4px 4px 0 #0a0a0a;
+  background-color: #ffffff;
+}
+
+#line-up *, #tickets *, #info * {
+  background: transparent;
+}
+
+#tickets th {
+  background-color: #0a0a0a;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+#line-up, #tickets, #info {
+  flex: 1;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#tickets {
+  position: relative;
+}
+
+#tickets .badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #0a0a0a;
+  color: #ffffff;
+  padding: 5px 10px;
+}
+
+#info {
+  flex-basis: 100%;
+}
+
+#line-up a:hover, #tickets a:hover, #info a:hover {
+  background-color: #0a0a0a;
+  color: #ffffff;
+}
+
+iframe {
+  height: 180px;
+  display: block;
+}
+
+header {
+  background: #e8e4d9 url("images/header.jpg") center/cover no-repeat;
+  background-blend-mode: multiply;
+  padding: 30px 20px;
+  position: relative;
+}
+
+.chip {
+  display: inline-block;
+  background: #e8e4d9;
+  padding: 5px 12px;
+  margin-top: 5px;
+}
+
+.credit {
+  font-size: 10px;
+  background: #e8e4d9;
+  padding: 2px 6px;
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  margin-top: 0;
+}
