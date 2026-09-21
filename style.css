@@ -1,70 +1,100 @@
-*, *::before, *::after { box-sizing: border-box; } 
-
-
-.table {
-  color: #312d3e;
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-*{
-    background: #e8e4d9;
-    color: #0a0a0a;
-    font-family: sans-serif;
-    margin: 0;
+/* --- BASIS / GLOBAAL --- */
+* {
+  background: #e8e4d9;
+  color: #0a0a0a;
+  font-family: sans-serif;
+  margin: 0;
 }
 
-
-th {
-  background-color: #0a0a0a;
-  color: #ffffff;
+body {
+  line-height: 1.5;
 }
 
-iframe{
-    height: 180px;
-}
-
-img {
-  padding: 0px;
-  max-width: 100%;
-  height: auto;
-}
-
+/* --- TYPOGRAFIE --- */
 h1 {
-  font-size: 45px;
+  font-size: 2.8125rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.0625rem;
   font-weight: 700;
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 1.875rem;
   text-transform: uppercase;
   color: #312d3e;
 }
 
-body {
-  line-height: 1.5; 
-}
-
-
+/* --- LINKS --- */
 a {
   color: #0a0a0a;
   text-decoration: none;
 }
 
 a:hover {
-  background-color: #0a0a0a;  
-  color: #ffffff;       
+  background-color: #0a0a0a;
+  color: #ffffff;
 }
 
-#line-up {
-  color: #0a0a0a;
+#line-up a:hover, #tickets a:hover, #info a:hover {
+  background-color: #0a0a0a;
+  color: #ffffff;
 }
 
-nav {
-  border: 2px solid #0a0a0a;
-  padding: 10px;
+/* --- MEDIA  --- */
+img {
+  padding: 0rem;
+  max-width: 100%;
+  height: auto;
+}
+
+iframe {
+  height: 11.25rem;
+}
+
+iframe {
+  height: 11.25rem;
+  display: block;
+}
+
+/* --- TABELLEN --- */
+.table {
+  color: #312d3e;
+}
+
+th {
+  background-color: #0a0a0a;
+  color: #ffffff;
+}
+
+#tickets th {
+  background-color: #0a0a0a;
+}
+
+/* --- HEADER --- */
+header {
   display: flex;
-  gap: 15px;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header {
+  background: #e8e4d9 url("images/header.jpg") center/cover no-repeat;
+  background-blend-mode: multiply;
+  padding: 1.875rem 1.25rem;
+  position: relative;
+}
+
+/*--- NAV ---*/
+nav {
+  border: 0.125rem solid #0a0a0a;
+  padding: 0.625rem;
+  display: flex;
+  gap: 0.9375rem;
   justify-content: center;
   position: sticky;
   top: 0;
@@ -72,37 +102,41 @@ nav {
   z-index: 10;
 }
 
-#line-up, #tickets, #info {
-  border: 2px solid #0a0a0a;
-  padding: 20px;
-  margin: 20px;
-  box-shadow: 4px 4px 0 #0a0a0a;
-  background-color: #ffffff;
-}
-
-#line-up *, #tickets *, #info * {
-  background: transparent;
-}
-
-#tickets th {
-  background-color: #0a0a0a;
-}
-
+/* --- MAIN --- */
 main {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 1.25rem;
+}
+
+/* --- SECTIES: line-up, tickets, info --- */
+#line-up {
+  color: #0a0a0a;
+}
+
+#line-up, #tickets, #info {
+  border: 0.125rem solid #0a0a0a;
+  padding: 1.25rem;
+  margin: 1.25rem;
+  box-shadow: 0.25rem 0.25rem 0 #0a0a0a;
+  background-color: #ffffff;
 }
 
 #line-up, #tickets, #info {
   flex: 1;
 }
 
-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-wrap: wrap;
+#line-up *, #tickets *, #info * {
+  background: transparent;
+}
+
+#line-up mark, #tickets mark, #info mark {
+  background: #0a0a0a;
+  color: #ffffff;
+}
+
+#info {
+  flex-basis: 100%;
 }
 
 #tickets {
@@ -111,47 +145,27 @@ header {
 
 #tickets .badge {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 0.625rem;
+  right: 0.625rem;
   background-color: #0a0a0a;
   color: #ffffff;
-  padding: 5px 10px;
+  padding: 0.3125rem 0.625rem;
 }
 
-#info {
-  flex-basis: 100%;
-}
-
-#line-up a:hover, #tickets a:hover, #info a:hover {
-  background-color: #0a0a0a;
-  color: #ffffff;
-}
-
-iframe {
-  height: 180px;
-  display: block;
-}
-
-header {
-  background: #e8e4d9 url("images/header.jpg") center/cover no-repeat;
-  background-blend-mode: multiply;
-  padding: 30px 20px;
-  position: relative;
-}
-
+/* --- KLEINE COMPONENTEN --- */
 .chip {
   display: inline-block;
   background: #e8e4d9;
-  padding: 5px 12px;
-  margin-top: 5px;
+  padding: 0.3125rem 0.75rem;
+  margin-top: 0.3125rem;
 }
 
 .credit {
-  font-size: 10px;
+  font-size: 0.625rem;
   background: #e8e4d9;
-  padding: 2px 6px;
+  padding: 0.125rem 0.375rem;
   position: absolute;
-  bottom: 5px;
-  left: 5px;
+  bottom: 0.3125rem;
+  left: 0.3125rem;
   margin-top: 0;
 }
